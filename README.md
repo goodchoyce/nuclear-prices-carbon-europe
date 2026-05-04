@@ -144,3 +144,6 @@ Next steps:
 - regulatory and governance awareness
 - clear communication of limitations
 - passion for data awareness 
+
+Notes : 
+Nuclear status was manually verified from public IAEA PRIS country-level information. Full PRIS Statistics access was not required for the first version of this project.
