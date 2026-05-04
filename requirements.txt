@@ -1,0 +1,10 @@
+pandas
+numpy
+matplotlib
+jupyter
+ipykernel
+requests
+openpyxl
+pyarrow
+python-dotenv
+plotly
