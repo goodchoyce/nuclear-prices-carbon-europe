@@ -147,3 +147,30 @@ Next steps:
 
 Notes : 
 Nuclear status was manually verified from public IAEA PRIS country-level information. Full PRIS Statistics access was not required for the first version of this project.
+
+
+# Progress log
+
+## 5 May 2026
+
+Started the first dataset review notebook for the European Power Mix Analysis project.
+
+Completed:
+- Loaded Ember yearly electricity data.
+- Filtered to Austria, United Kingdom, France, Germany, Czechia and Slovakia.
+- Built generation mix share tables.
+- Created nuclear share, low-carbon vs fossil, and carbon intensity comparisons.
+- Loaded Eurostat household electricity price data.
+- Filtered household prices to a comparable medium consumption band.
+- Built a combined country summary table.
+- Exported processed CSV files for later dashboard work.
+
+Current position:
+- Data work is still in progress.
+- Power BI should wait until the data layer is cleaner.
+- Next data tasks are non-household prices and IAEA PRIS reactor status.
+
+Notes:
+- Household price comparisons need caveats because prices include taxes, levies, network costs and policy choices.
+- Ember generation and Eurostat price periods may not align exactly.
+- UK price data may need special handling if the latest common period is older than the Ember generation year.
