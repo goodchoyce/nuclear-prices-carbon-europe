@@ -1,176 +1,174 @@
-# Nuclear, Prices and Carbon: European Power Mix Analysis
+# European Power Mix Analysis: Nuclear, Prices and Carbon
 
-A Python and Power BI energy analytics project investigating nuclear power, electricity prices, carbon intensity and generation mix across selected European electricity systems.
+A Python and Power BI portfolio project investigating whether nuclear-heavy European electricity systems are associated with cheaper, cleaner or less volatile electricity, and what Austria's non-nuclear model reveals.
 
-## Why did I start this project?
+The project is not here to argue for or against nuclear power. It investigates what the data can show, and what the data cannot prove. The analytical style is influenced by Hans Rosling and Gapminder: use data to challenge assumptions, make complex patterns easier to understand, and avoid simplistic slogans.
 
-I started this project while I was in Austria, around the time the IAEA Conference on Nuclear and Radiation Regulation was taking place in Vienna.
+---
 
-This is influenced by Hans Rosling and Gapminder: data should be used to challenge assumptions, explain complex global issues clearly, and avoid turning messy realities into simple slogans.
+## Research question
 
-My parnter and I had a discussion about nuclear power as it is not only a technical question. It depends on regulation, safety, public trust, long-term governance and whether countries have the institutions to manage it properly.
+**Main question.** Are nuclear-heavy European electricity systems associated with cheaper, cleaner or less volatile electricity, and what does Austria's non-nuclear model reveal?
 
-At the same time, I was hearing more conversations about energy prices and whether people might become more open to nuclear if they thought it could bring bills down.
+**Sub-questions.**
 
-So this project is not here to argue for or against nuclear power. It is here to test the data properly.
+1. How does the generation mix differ across the six selected countries, and how has it changed since 2000?
+2. Is a higher nuclear share associated with a lower power-sector carbon intensity, after considering hydro and renewables?
+3. How do household and non-household electricity prices compare, and how do they relate (if at all) to the generation mix?
+4. What does Austria's high-hydro, no-nuclear model suggest about alternative low-carbon paths, and what makes it hard to generalise?
+5. Where do the data run out — what cannot be inferred from yearly national averages alone?
 
-## Main question
+---
 
-**Are nuclear-heavy European electricity systems associated with cheaper, cleaner or less volatile electricity, and what does Austria’s non-nuclear model reveal?**
+## Countries
 
-## Countries included
+Austria, United Kingdom, France, Germany, Czechia, Slovakia.
 
-| Country | Why it is included |
-|---|---|
-| Austria | Non-nuclear case study with high hydro generation |
-| United Kingdom | Relevant to UK energy policy, nuclear, wind and gas exposure |
-| France | Nuclear-heavy benchmark |
-| Germany | Nuclear phase-out comparison |
-| Czechia | Nuclear-using neighbour of Austria |
-| Slovakia | Nuclear-using neighbour of Austria |
+The selection contrasts a non-nuclear hydro-heavy system (Austria), a nuclear-dominated system (France), a system that completed its nuclear phase-out in 2023 (Germany), a system with significant wind and gas (United Kingdom), and two smaller Central European systems with material nuclear and coal exposure (Czechia, Slovakia).
 
-## What I am comparing
-
-- nuclear share of electricity generation
-- renewable share
-- fossil fuel share
-- gas share
-- hydro share
-- household electricity prices
-- non-household electricity prices
-- carbon intensity
-- price volatility, if the data supports it
+---
 
 ## Data sources
 
-| Source | Use |
-|---|---|
-| Ember Electricity Data Explorer | Generation mix, demand, emissions and carbon intensity |
-| Eurostat `nrg_pc_204` | Household electricity prices |
-| Eurostat `nrg_pc_205` | Non-household electricity prices |
-| IAEA PRIS | Nuclear reactor status and capacity |
-| ENTSO-E Transparency Platform | Hourly generation, prices, load and cross-border flows |
-| Electricity Maps | Carbon intensity validation where useful |
-| Kaggle | Fast prototyping only, checked against official sources before final claims |
+| Source | Use | Status |
+|---|---|---|
+| Ember Electricity Data Explorer (yearly) | Generation mix, demand, power-sector emissions, carbon intensity | Loaded |
+| Eurostat `nrg_pc_204` | Household electricity prices, biannual | Loaded |
+| Eurostat `nrg_pc_205` | Non-household electricity prices, biannual | Planned |
+| IAEA PRIS | Nuclear reactor status and capacity | Planned |
+| ENTSO-E Transparency Platform | Hourly generation and price data for volatility analysis | Later phase |
+| Electricity Maps | Consumption-based carbon intensity for cross-validation | Later phase |
 
-Raw datasets are kept local and are not committed to this repository.
+Raw data is not committed to this repository. See `docs/source_notes.md` for licences, vintage and access notes.
 
-## Tools
-
-| Tool | Purpose |
-|---|---|
-| Python | Data cleaning and analysis |
-| pandas | Data transformation |
-| Jupyter Notebook | Exploratory analysis |
-| Power BI | Dashboard design |
-| Git and GitHub | Version control and portfolio evidence |
-| Markdown | Documentation |
-
-## Planned dashboard
-
-1. Executive summary
-2. Generation mix by country
-3. Nuclear, renewables, gas and hydro comparison
-4. Electricity price comparison
-5. Carbon intensity comparison
-6. Price volatility and energy security
-7. Austria case study
-8. Methodology and caveats
-
-## Method
-
-The first version will stay simple:
-
-1. Load Ember electricity data.
-2. Filter to Austria, United Kingdom, France, Germany, Czechia and Slovakia.
-3. Calculate nuclear, renewable, fossil, gas and hydro shares.
-4. Add Eurostat household and non-household electricity prices.
-5. Verify nuclear status using IAEA PRIS.
-6. Compare generation mix, prices and carbon intensity.
-7. Build a Power BI dashboard with clear caveats.
-8. The analysis is also influenced by Hans Rosling and Gapminder: use clear visuals, challenge assumptions, and stay honest about what the data can and cannot prove.
-
-## Caveats
-
-There should be no claim that nuclear power automatically makes electricity cheaper.
-
-Electricity prices are affected by many things:
-
-- gas prices
-- taxes and levies
-- network costs
-- subsidies
-- market design
-- demand
-- imports and exports
-- interconnectors
-- national policy choices
-
-Austria also needs careful interpretation. Its low-carbon electricity system depends heavily on hydro resources, which other countries cannot simply copy.
-
-The aim: show patterns clearly, not to pretend one chart settles the debate.
+---
 
 ## Current status
 
-Early-stage project setup.
+- First dataset review notebook created (`notebooks/01_dataset_review.ipynb`).
+- Ember generation data loaded and filtered to the six selected countries.
+- Latest-year generation mix summaries created.
+- Nuclear, hydro, gas, coal, wind and solar shares compared.
+- Low-carbon vs fossil generation comparison created.
+- Carbon intensity comparison added.
+- Eurostat household electricity price data loaded.
+- Household prices filtered to a comparable medium consumption band (DC, 2,500–4,999 kWh, all taxes and levies included, EUR).
+- Combined country summary table created, joining generation shares, low-carbon and fossil shares, carbon intensity and household price.
+- Processed summary tables exported for later Power BI use.
+- Findings to date are descriptive only and do not claim causation.
 
-Completed:
+See `docs/progress_log.md` for the dated working log.
 
-- project folder created
-- Git repository initialised
-- raw data folders created
-- Ember, Eurostat and IAEA PRIS files started locally
-- `.gitignore` set up to keep raw data and large files out of Git
-- initial documentation scaffold created
+---
 
-Next steps:
+## Repository structure
 
-1. Finalise documentation.
-2. Load Ember data in the first notebook.
-3. Inspect columns and country coverage.
-4. Create the first country comparison table.
-5. Add Eurostat price data.
-6. Build first exploratory charts.
-7. Start the Power BI dashboard.
+```
+.
+├── data/
+│   ├── raw/          # Not committed. See docs/source_notes.md.
+│   └── processed/    # Small derived tables.
+├── notebooks/
+│   └── 01_dataset_review.ipynb
+├── docs/
+│   ├── progress_log.md
+│   ├── source_notes.md
+│   ├── methodology.md
+│   ├── glossary.md
+│   └── caveats.md
+├── README.md
+└── .gitignore
+```
 
-## Why this matters for my portfolio
+---
 
-- energy-sector data interpretation
-- Python and pandas data cleaning
-- Power BI dashboard design
-- time-series analysis
-- data quality checks
-- documentation
-- regulatory and governance awareness
-- clear communication of limitations
-- passion for data awareness 
+## What this project is, and what it is not
 
-Notes : 
-Nuclear status was manually verified from public IAEA PRIS country-level information. Full PRIS Statistics access was not required for the first version of this project.
+**It is.**
 
+- An exploratory, descriptive comparison of six European electricity systems.
+- An attempt to be careful with vocabulary, units and time-period alignment.
+- A portfolio piece showing data ingestion, cleaning, joining, visualisation and reporting.
 
-# Progress log
+**It is not.**
 
-## 5 May 2026
+- An advocacy piece for or against nuclear power.
+- A cost-of-electricity model. Eurostat consumer prices include taxes, levies, network costs and policy choices that are not generation costs.
+- A causal study. Nothing here separates the effect of generation mix from market design, geography, interconnection or fiscal policy.
+- A grid-stability study. Yearly national averages cannot speak to volatility. ENTSO-E hourly data is in a later phase.
 
-Started the first dataset review notebook for the European Power Mix Analysis project.
+---
 
-Completed:
-- Loaded Ember yearly electricity data.
-- Filtered to Austria, United Kingdom, France, Germany, Czechia and Slovakia.
-- Built generation mix share tables.
-- Created nuclear share, low-carbon vs fossil, and carbon intensity comparisons.
-- Loaded Eurostat household electricity price data.
-- Filtered household prices to a comparable medium consumption band.
-- Built a combined country summary table.
-- Exported processed CSV files for later dashboard work.
+## Methodology principles
 
-Current position:
-- Data work is still in progress.
-- Power BI should wait until the data layer is cleaner.
-- Next data tasks are non-household prices and IAEA PRIS reactor status.
+Full notes in `docs/methodology.md`.
 
-Notes:
-- Household price comparisons need caveats because prices include taxes, levies, network costs and policy choices.
-- Ember generation and Eurostat price periods may not align exactly.
-- UK price data may need special handling if the latest common period is older than the Ember generation year.
+- Country names follow Ember's labelling: "United Kingdom", "Czechia".
+- Generation mix is built from Ember individual fuels (Subcategory = "Fuel"), not the rolled-up "Aggregate fuel" rows, to avoid double counting.
+- Carbon intensity uses Ember's gCO₂/kWh metric, which is generation-based — not consumption-based.
+- Trend charts use 2024 as the latest full year. 2025 is excluded unless explicitly marked preliminary.
+- Household prices use band DC (2,500–4,999 kWh), all taxes and levies included, EUR per kWh.
+- Where Ember generation and Eurostat price periods do not align, the shorter common window is used and the misalignment is stated near the chart.
+
+---
+
+## Vocabulary discipline
+
+Wording is part of the analysis. Specific words have been chosen to keep claims proportional to the evidence.
+
+**Used:** investigates, compares, is associated with, suggests, consistent with, needs further analysis.
+
+**Avoided:** proves, settles the debate, nuclear is cheaper, Austria proves, France proves, definitive.
+
+---
+
+## Caveats (summary)
+
+Full list in `docs/caveats.md`.
+
+- Generation mix is not the same as consumption mix; imports and exports are not netted out.
+- Carbon intensity is power-sector only, not economy-wide.
+- Household price drivers are not limited to generation.
+- The six countries differ in geography, market design, interconnection and history. Comparisons are illustrative, not controlled.
+- Austria's hydro share is partly Alpine geography; not directly replicable.
+- Germany's series shows a structural break around 2022–2023 (nuclear phase-out, coal reduction).
+- France's nuclear-dominated mix reflects decades of central-state programme; the model is not portable.
+- UK Eurostat price coverage may be shorter than other countries; treat carefully.
+
+---
+
+## Reproducibility
+
+```bash
+python -m venv .venv
+.venv\Scripts\activate          # Windows
+pip install jupyter pandas matplotlib
+jupyter lab
+```
+
+Raw data must be downloaded manually from the sources listed in `docs/source_notes.md` and placed under `data/raw/<source>/`.
+
+---
+
+## Roadmap
+
+1. Add Eurostat non-household electricity prices (`nrg_pc_205`).
+2. Add IAEA PRIS nuclear reactor status and capacity.
+3. Check time-period alignment between Ember and Eurostat in detail.
+4. Decide how to handle UK missing or older price data.
+5. Prepare clean Power BI-ready processed tables.
+6. Build first Power BI dashboard prototype.
+7. Add ENTSO-E hourly volatility analysis (later phase).
+8. Cross-validate Ember carbon intensity against Electricity Maps (later phase).
+
+---
+
+## Attribution
+
+Data © respective providers (Ember, Eurostat, IAEA, ENTSO-E, Electricity Maps). This repository does not redistribute their data.
+
+---
+
+## Licence
+
+Code in this repository is released under the MIT Licence. Data is not relicensed; see `docs/source_notes.md` for each source's terms.
