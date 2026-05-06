@@ -172,3 +172,17 @@ Data © respective providers (Ember, Eurostat, IAEA, ENTSO-E, Electricity Maps).
 ## Licence
 
 Code in this repository is released under the MIT Licence. Data is not relicensed; see `docs/source_notes.md` for each source's terms.
+
+---
+
+## First visual output
+
+![Connected scatter of nuclear share against power-sector carbon intensity, six European countries, 2000–2024](outputs/charts/connected_scatter_nuclear_share_carbon_intensity_2000_2024.png)
+
+*Connected scatter, 2000–2024. Each line shows one country's path through nuclear share (x-axis) and power-sector carbon intensity (y-axis).*
+
+This is where things start to get interesting! Czechia and Slovakia appear to reduce carbon intensity while nuclear share stays high or rises. France also sits in the high-nuclear, low-carbon part of the chart. The pattern suggests it isnt realistic to assume "more nuclear = lower carbon". Germany and the United Kingdom reduce carbon intensity while nuclear share falls, and Austria reduces carbon intensity with no nuclear generation at all.
+
+So the useful takeaway is more nuanced; different countries seem to reach lower-carbon electricity through different routes. Nuclear is one route in this group, but hydro, renewables, coal reduction and wider system choices clearly matter too.
+
+This is just a descriptive interpretation. Causation != correlation. See `docs/caveats.md` for the full limitations.
