@@ -90,6 +90,14 @@ Germany is high across much of the series. Austria rises strongly after 2022. Cz
 
 The United Kingdom is shown only up to 2020-S1 because the UK household series stops there in this Eurostat file. These are consumer prices, not generation costs, so they need to be interpreted alongside taxes, levies, network costs, market design, policy choices and generation mix.
 
+## Planned spatial analysis extension: UK regional carbon intensity
+
+A new priority for this project is to add a UK regional carbon-intensity map. The first version will test whether the data is best shown by county, ITL/NUTS region, or electricity grid region.
+
+This extension moves the project beyond country-level comparison and adds a spatial analysis layer. It is intended to demonstrate mapping, regional comparison, boundary matching, data-quality judgement and Power BI-ready reporting.
+
+The map will be descriptive only. Regional carbon-intensity differences may reflect generation location, demand patterns, grid-region definitions, imports, time of day and dataset coverage. The output will not claim that one region "causes" another to be cleaner or dirtier.
+
 ---
 
 ## Repository structure
@@ -191,14 +199,15 @@ Raw data must be downloaded manually from the sources listed in `docs/source_not
 
 ## Roadmap
 
-1. Extend non-household electricity price analysis using Eurostat `nrg_pc_205`.
-2. Add IAEA PRIS nuclear reactor status and capacity.
-3. Check time-period alignment between Ember and Eurostat in detail.
-4. Decide how to handle UK missing or older price data.
-5. Prepare clean Power BI-ready processed tables.
-6. Build first Power BI dashboard prototype.
-7. Add ENTSO-E hourly volatility analysis (later phase).
-8. Cross-validate Ember carbon intensity against Electricity Maps (later phase).
+1. Add UK regional carbon-intensity mapping as a top-priority spatial analysis extension.
+2. Extend non-household electricity price analysis using Eurostat `nrg_pc_205`.
+3. Add IAEA PRIS nuclear reactor status and capacity.
+4. Check time-period alignment between Ember and Eurostat in detail.
+5. Decide how to handle UK missing or older price data.
+6. Prepare clean Power BI-ready processed tables.
+7. Build first Power BI dashboard prototype.
+8. Add ENTSO-E hourly volatility analysis (later phase).
+9. Cross-validate Ember carbon intensity against Electricity Maps (later phase).
 
 ---
 

@@ -39,3 +39,13 @@ Short definitions for terms used in this project. Where a term has multiple comm
 **Latest full year.** 2024 in this project. 2025 is treated as preliminary.
 
 **Association vs causation.** An association is a statistical relationship between variables. A causal claim requires a mechanism and the ability to rule out confounders. This project reports associations only.
+
+**Regional carbon intensity.** Carbon intensity reported below national level. In this project, the exact regional unit will depend on the source data and may be county, ITL/NUTS region or electricity grid region.
+
+**ITL/NUTS region.** A statistical region used for comparing areas below country level. The UK now uses ITL, which replaced the former UK NUTS classification after Brexit.
+
+**County boundary.** An administrative or geographic boundary used for mapping. County boundaries may be familiar to UK audiences but may not match electricity-system regions.
+
+**Grid region.** A region used by an electricity-system dataset or network operator. It may reflect how electricity data is collected or modelled rather than standard administrative geography.
+
+**Spatial join.** A data-processing step that attaches data values to map boundaries, usually by matching region names, codes or geographic shapes.

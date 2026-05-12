@@ -33,6 +33,14 @@ A single canonical place for the limitations of this analysis. Update as new dat
 
 ---
 
+## Regional mapping caveats
+
+- A UK regional carbon-intensity map will not necessarily show the carbon intensity of electricity consumed by each household or business in that region.
+- Electricity grid regions may not match counties, local authorities or ITL/NUTS regions.
+- A spatial join can make the map easier to read, but it can also create false precision if the source data and boundary geography do not align.
+- Local generation is not the same as local consumption. Electricity can move across regions.
+- Carbon intensity varies by time of day and season. A map based on annual or daily averages should not be read as a real-time grid view.
+
 ## Methodological
 
 - Generation is reported in TWh; capacity is reported in GW. They are not interchangeable.

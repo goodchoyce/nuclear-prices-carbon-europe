@@ -57,6 +57,20 @@ A small mapping table in code converts ISO codes (GBR, CZE, DEU, AUT, FRA, SVK) 
 
 ---
 
+## Planned UK regional carbon-intensity map
+
+A planned extension will examine regional variation in UK electricity carbon intensity. The intended output is a map suitable for Power BI and/or Python visualisation.
+
+The final geography will depend on data availability and boundary compatibility. Candidate geographies are:
+
+- county or local authority boundary
+- ITL/NUTS region
+- electricity grid region or carbon-intensity region
+
+The first data pass will not assume that administrative regions and electricity-system regions match. Where a spatial join is required, the join key and boundary file will be documented. If only grid-region data is available, the map will use grid regions rather than forcing the data onto county boundaries.
+
+This extension will be descriptive. It will show regional variation in reported or estimated carbon intensity, but it will not claim causation.
+
 ## Time period
 
 - Yearly series start in 2000.

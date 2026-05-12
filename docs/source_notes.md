@@ -81,6 +81,27 @@ Per-dataset notes on access, vintage, licence, expected file path and known quir
 
 ---
 
+## UK regional carbon-intensity mapping — planned
+
+- **Use.** Regional carbon-intensity map for the United Kingdom.
+- **Status.** Planned as a top-priority spatial analysis extension.
+- **Possible source categories.**
+  - UK electricity carbon-intensity data with regional breakdown.
+  - Official UK boundary files for county, local authority, ITL/NUTS or equivalent regions.
+  - Grid-region definitions if the carbon-intensity source uses electricity-system regions rather than administrative regions.
+- **Expected file paths.**
+  - `data/raw/uk_regional_carbon/`
+  - `data/raw/boundaries/`
+  - `data/processed/uk_regional_carbon_intensity_map.csv`
+- **Granularity.** To be confirmed. Candidate levels are county, local authority, ITL/NUTS region or electricity grid region.
+- **Vintage.** To be recorded at download time.
+- **Licence.** To be checked before use. Boundary files and carbon-intensity data may have different reuse terms.
+- **Quirks.**
+  - Administrative regions may not match electricity grid regions.
+  - Generation location is not the same as local electricity consumption.
+  - Carbon intensity may vary by hour, so an annual or daily average can hide short-term variation.
+  - Boundary simplification may be needed for Power BI performance.
+
 ## Kaggle (prototyping only)
 
 - Used only for early prototyping. Not citable as final evidence. Do not commit Kaggle CSVs.

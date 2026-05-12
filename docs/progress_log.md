@@ -77,3 +77,4 @@ Completed:
 - ENTSO-E hourly volatility analysis (later phase).
 - Cross-validate Ember carbon intensity against Electricity Maps (later phase).
 - Methodology and limitations notes inside the notebook itself, not just `docs/`.
+- Add UK regional carbon-intensity mapping as a top-priority spatial analysis extension. Start by checking whether county, ITL/NUTS region, or electricity grid region is the most defensible geography.
